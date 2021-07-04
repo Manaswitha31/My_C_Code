@@ -1,14 +1,11 @@
-#include<stdio.h>
-//void caller();
-static int x=10;
-int fun()
-{
-	static int y=0;
-	printf("%d\n",y);
-	y=y+1;
-}
+#include <stdio.h>
+int a=3;
+int b=4;
+extern int b;
 int main()
 {
-	caller();
+	extern int a;
+	printf("%d\n",a);
+	printf("%d",b);
 	return 0;
 }
